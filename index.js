@@ -3,7 +3,11 @@ import cors from 'cors'
 const app = express()
 app.use(json())
 app.use(cors())
+app.use(cors({
+    origin: 'https://notes-app-tau-virid-47.vercel.app'
+  }))
 const PORT = process.env.PORT || 3001
+export default PORT
 let notes = [
     {
       id: 1,
